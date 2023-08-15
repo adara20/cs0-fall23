@@ -18,7 +18,7 @@ tagline: Howard CSCI 100 Fall 2021
 description: Intro to Computer Science
 author: Abenezer Dara
 baseurl: '/' # the subpath of your site, e.g. /blog
-url: 'https://adara20.github.io/csci100-fa23' # the base hostname & protocol for your site, e.g. http://example.com
+url: 'https://adara20.github.io/' # the base hostname & protocol for your site, e.g. http://example.com
 exclude: ["Gemfile", "Gemfile.lock", "LICENSE", "README.md", "vendor"]
 
 # Theme settings
