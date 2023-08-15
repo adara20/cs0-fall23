@@ -16,9 +16,9 @@
 title: CSCI 100
 tagline: Howard CSCI 100 Fall 2021
 description: Intro to Computer Science
-author: Alexander Krentsel
+author: Abenezer Dara
 baseurl: '/' # the subpath of your site, e.g. /blog
-url: 'https://csci100.org' # the base hostname & protocol for your site, e.g. http://example.com
+url: 'https://cs100.org' # the base hostname & protocol for your site, e.g. http://example.com
 exclude: ["Gemfile", "Gemfile.lock", "LICENSE", "README.md"]
 
 # Theme settings
@@ -30,10 +30,6 @@ permalink: pretty
 aux_links:
   YouTube Channel:
     - 'https://www.youtube.com/channel/UCS-xiMGMN9YsMxQnqAai4hw/featured'
-  PythonTutor:
-    - 'https://pythontutor.com/composingprograms.html#mode=edit'
-  Mimir:
-    - 'https://class.mimir.io/courses/ea69c458-7197-4411-af4e-50754e398f64'
   Piazza:
     - 'https://piazza.com/class/ksjaetb15k147d'
   Blackboard:
