@@ -19,7 +19,7 @@ description: Intro to Computer Science
 author: Abenezer Dara
 baseurl: '/' # the subpath of your site, e.g. /blog
 url: 'https://adara20.github.io/csci100-fa23' # the base hostname & protocol for your site, e.g. http://example.com
-exclude: ["Gemfile", "Gemfile.lock", "LICENSE", "README.md"]
+exclude: ["Gemfile", "Gemfile.lock", "LICENSE", "README.md", "_posts"]
 
 # Theme settings
 remote_theme: pmarsceill/just-the-docs@v0.3.3
