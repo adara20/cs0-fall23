@@ -2,10 +2,10 @@
 title: Week 3
 ---
 
-Sep 6
+Sep 4
 : No lecture meeting - Labor Day
   
-Sep 8
+Sep 5
 : All campus classes cancelled
   : \[[Replit Video Tutorial](https://www.youtube.com/playlist?list=PLr509y092L2-LMpav-PeEOhK_kCBJg3ke){:target="_blank"}\]
 
