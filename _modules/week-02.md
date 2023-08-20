@@ -9,4 +9,4 @@ Aug 30
 : **Data Types and Operators**
 
 Aug 31
-: **Lab 2:** [Variables and Expressions]
+: **Lab 2** Variables and Expressions

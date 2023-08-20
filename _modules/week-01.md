@@ -9,4 +9,4 @@ Aug 23
 : **Languages, Hello World**
 
 Aug 24
-: **Lab 1** 
+: **Lab 1** Printing
