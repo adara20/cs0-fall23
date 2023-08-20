@@ -68,7 +68,7 @@ These details are subject to change during the semester, however the current pla
 - ~8 Quizzes - random time during lecture time, once a week. 
 - 12 Labs - 1x per week. Work w/ partners, submit individually
 - 5 Homeworks - spread throughout the semester. Work individually, submit individually.
-- 2 Projects - Image Filters and Search Engine
+- 2 Projects - More details coming soon.
 
 Assignments will be due at 11:59pm, with a 10% penalty per each day that the assignment is late up to 5 days total.
 
