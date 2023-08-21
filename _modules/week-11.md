@@ -2,11 +2,11 @@
 title: Week 11
 ---
 
-Nov 1
-: **Exam 2**
+Oct 30
+: **Tuples, Sets** (Guest Lecture by Sonam Benakatti)
   
-Nov 3
+Nov 1
 : **Time/Space Complexity, Big O**
 
-Nov 4
+Nov 2
 : **Lab**{: .label .label-purple }Lab 10: Big O, Complexity

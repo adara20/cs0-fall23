@@ -2,11 +2,11 @@
 title: Week 10
 ---
 
-Oct 25
+Oct 23
 : **Pass-by-Reference vs Pass-by-Value**
   
-Oct 27
+Oct 25
 : **Intro to Algorithms, Runtime**
 
-Oct 28
+Oct 26
 : **Lab**{: .label .label-purple }Lab 9: Potpourri Practice

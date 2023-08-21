@@ -2,11 +2,11 @@
 title: Week 9
 ---
 
-Oct 18
+Oct 16
 : **Destructive vs Non-Destructive Functions**
   
-Oct 20
+Oct 18
 : **Testing Code: Assert, Edge Cases**
 
-Oct 21
+Oct 19
 : **Lab**{: .label .label-purple }Lab 8

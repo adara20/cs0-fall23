@@ -2,11 +2,11 @@
 title: Week 12
 ---
 
-Nov 8
-: **Tuples, Sets** (Guest Lecture by Sonam Benakatti)
+Nov 6
+: **Exam 2** 
   
-Nov 10
+Nov 8
 : **Computer Science Ethics**
 
-Nov 11
-: No Class, Veterans Day
+Nov 9
+: **Lab**{: .label .label-purple }Lab 11: Big O, Complexity

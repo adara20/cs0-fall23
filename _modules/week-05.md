@@ -2,11 +2,11 @@
 title: Week 5
 ---
 
-Sep 20
+Sep 18
 : **Functions**
   
-Sep 22
+Sep 20
 : **Exam 1**
 
-Sep 23
+Sep 21
 : **Lab**{: .label .label-purple }Lab 5: Functions

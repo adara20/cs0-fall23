@@ -9,4 +9,5 @@ Aug 23
 : **Languages, Hello World**
 
 Aug 24
-: **Lab 1** Printing
+: **Lab 1**{: .label .label-purple } Printing
+

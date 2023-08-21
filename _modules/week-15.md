@@ -2,11 +2,11 @@
 title: Week 15
 ---
 
-Nov 29
+Nov 27
 : **Classes, Attributes, Object-Oriented Programming**
   
-Dec 1
+Nov 29
 : **Class Methods, In Closing, What's Next**
 
-Dec 2
+Nov 30
 : **Final Review** (No lab assignment this week)

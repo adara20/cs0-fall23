@@ -2,11 +2,11 @@
 title: Week 8
 ---
 
-Oct 11
+Oct 9
 : **2-Dimensional Lists, Nested For Loops, Images**
   
-Oct 13
+Oct 11
 : **Image I/O, Docstrings**
 
-Oct 14
+Oct 12
 : **Project** TBD
