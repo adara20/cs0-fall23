@@ -8,4 +8,5 @@ description: The weekly event schedule.
 
 For virtual events events, please join via the Zoom or Meet link in the calendar event description.
 
-<iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=1&bgcolor=%23ffffff&ctz=America%2FNew_York&title=CSCI100%20Fall%202023%20Lectures&src=Y182MTE0ZWFmOThkMTdmODM3MzkwNjliMWQyZmNmNzJlYTdhZjdmNDkyZDQxNTRlYmQyNDUxOGNkMGE0NTQ4YjNjQGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20&color=%23EF6C00" style="border:solid 1px #777" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+<iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=1&bgcolor=%23ffffff&ctz=America%2FNew_York&mode=WEEK&src=YWJlbmV6ZXJAZ29vZ2xlLmNvbQ&src=Y182MTE0ZWFmOThkMTdmODM3MzkwNjliMWQyZmNmNzJlYTdhZjdmNDkyZDQxNTRlYmQyNDUxOGNkMGE0NTQ4YjNjQGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20&src=YWJlbmlkYW5pZWxAZ21haWwuY29t&src=ZW4udXNhI2hvbGlkYXlAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&color=%23039BE5&color=%23EF6C00&color=%23AD1457&color=%230B8043" style="border:solid 1px #777" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+
