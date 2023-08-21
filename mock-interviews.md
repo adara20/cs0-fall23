@@ -31,7 +31,7 @@ Afterwards, your interviewer will provide you with feedback as well as tips on h
 
 Use the button below to sign up for a mock interview slot with one of the Google TAs. Click on one of the empty appointment slots and click save to book it. You may as many interviews as you'd like for the remainder of the semester, just please book with a new person each time (as each interviewer likely has only one question they ask). Please watch [this video talk on how to interview](https://www.youtube.com/watch?v=FG5860rWppA){:target="_blank"} before your mock interview to get the most out of the mock interview experience. 
 
-[Schedule a Mock Interview](https://calendar.google.com/calendar/u/0/selfsched?sstoken=UU1kU0hnS0VoOUM0fGRlZmF1bHR8NzVjM2ExNmY1YzBlZDE1YTE0MWMzODNhMDJlZWJjNzA){: .btn .btn-outline }
+We will add links to sign up for mock interviews later in the semester.
 
 If after one mock interview you want further experience, consider spending 2-3 weeks working on practice problems and then schedule a second session with a different interviewer.
 
@@ -43,7 +43,7 @@ The Brilliant Black Minds program from Karat offers students access to 4 free pr
 
 ## Career Info 
 
-Here's a [playlist of the career talks given this semester](https://www.youtube.com/playlist?list=PLr509y092L2-E3SicuWbxONv0KXpnAVeg){:target="_blank"}, which cover UX Design, Data Analyst, Product Management roles, and more.
+Here's a [playlist of the career talks given in a prior semester](https://www.youtube.com/playlist?list=PLr509y092L2-E3SicuWbxONv0KXpnAVeg){:target="_blank"}, which cover UX Design, Data Analyst, Product Management roles, and more.
 
 ### Internship Opportunities for Freshmen/Sophomores
 
