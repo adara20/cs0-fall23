@@ -49,7 +49,7 @@ You should take advantage of labs as you can ask the professor or TAs for help o
 
 ### Office Hours
 
-We will hold a mixture of in-person and virtual office hours at a wide variety of times. Virtual office hours will be held on Zoom, the link can be found at the [course schedule page](schedule.md). In-person office hours will be held in Abenezer's office. You are welcome to come for any reason, including course material questions, lecture clarifications, industry interview prep, career path discussions, or just to hang out. 
+We will hold a mixture of in-person and virtual office hours at a wide variety of times. Virtual office hours will be held on Zoom, the link can be found at the [course schedule page](schedule.md). In-person office hours will be held in your instructor's office (LKD 1110G). You are welcome to come for any reason, including course material questions, lecture clarifications, industry interview prep, career path discussions, or just to hang out. 
 
 As a course, we commit to making sure no student fails the class due to lack of class resources, so if you are behind or confused, please reach out for help. The course staff will make themselves as available as possible to help you.
 
@@ -92,19 +92,16 @@ The course staff will work tirelessly to provide enough support for any student 
 
 ## Resources
 
-This course website, [csci100.org](https://www.csci100.org), will be your one-stop resource for the syllabus, schedule, lecture videos, and assignment links. Additionally, we will be using the following software.
+This course website, [cs100.org](https://www.csci100.org), will be your one-stop resource for the syllabus, schedule, lecture videos, and assignment links. Additionally, we will be using the following software.
 
-**Mimir**
-You will get a link to sign up for this tool when we begin class. We will use Mimir for editing and turning in assignments. Note that Mimir may display a “grade” for you, but the official one is in Blackboard.
+**Codio**
+You will get a link to sign up for this tool when we begin class. We will use Codio for editing and turning in assignments. Note that Codio may display a “grade” for you, but the official one is in Canvas.
 
-**Piazza**
-This term we will be using Piazza for class discussion. The system is highly catered to getting you help fast and efficiently from classmates, the TA, and myself. Rather than emailing questions to the teaching staff, I encourage you to post your questions on Piazza. You can find the [class Piazza here](https://piazza.com/howard/fall2021/csci100/home).
+**EdStem**
+This term we will be using EdStem for class discussion. The sustem is highly catered to getting you help fast and efficiently from classmates, the TA, and myself. Rather than emailing questions to the teaching staff, I encourage you to post your questions to EdStem. You can find the [class EdStem here](https://edstem.org/us/courses/41629/){:target="_blank"}.
 
-**Zoom**
-In light of the large class size and COVID risks, our weekly lectures and labs will be taught virtually over Zoom. You can find the Zoom link for your section at [https://csci100.org/schedule/](https://csci100.org/schedule/).
-
-**Blackboard**
-Your official class midterm and final grades will be published in Blackboard. You should already have a Blackboard account. Get in touch with your advisor if you can't access the course on Blackboard. Other than occasionally syncing grades to Blackboard, we will not be using Blackboard.
+**Canvas**
+Your official class midterm and final grades will be published in Canvas. You should already have a Canvas account. Get in touch with your advisor if you can't access the course on Canvas. Other than occasionally syncing grades to Canvas, we will not be using it.
 
 ### Material Attribution
 We'd like to thank UC Berkeley's [CS10: The Beauty and Joy of Computing](https://cs10.org/fa19/) and [CS61A: Structure and Interpretation of Computer Programs](https://inst.eecs.berkeley.edu/~cs61a/fa15/), from which this course borrows high-level topics and organization. Course material will be created by Prof. Alex Krentsel, borrowing from past iterations of this course at Howard taught by GIR instructors.
