@@ -28,12 +28,12 @@ search_enabled: true
 heading_anchors: true
 permalink: pretty
 aux_links:
-  YouTube Channel:
+  YouTube Channel (Fall 2021):
     - 'https://www.youtube.com/channel/UCS-xiMGMN9YsMxQnqAai4hw/featured'
-  Piazza:
-    - 'https://piazza.com/class/ksjaetb15k147d'
-  Blackboard:
-    - 'http://blackboard.howard.edu/'
+  EdStem:
+    - 'https://edstem.org/us/courses/41629/'
+  Canvas:
+    - 'http://canvas.howard.edu/'
 aux_links_new_tab: true
 footer_content:
 
