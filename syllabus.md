@@ -102,7 +102,3 @@ This term we will be using EdStem for class discussion. The sustem is highly cat
 
 **Canvas**
 Your official class midterm and final grades will be published in Canvas. You should already have a Canvas account. Get in touch with your advisor if you can't access the course on Canvas. Other than occasionally syncing grades to Canvas, we will not be using it.
-
-### Material Attribution
-We'd like to thank UC Berkeley's [CS10: The Beauty and Joy of Computing](https://cs10.org/fa19/) and [CS61A: Structure and Interpretation of Computer Programs](https://inst.eecs.berkeley.edu/~cs61a/fa15/), from which this course borrows high-level topics and organization. Course material will be created by Prof. Alex Krentsel, borrowing from past iterations of this course at Howard taught by GIR instructors.
-
