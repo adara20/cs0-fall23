@@ -9,4 +9,4 @@ Oct 11
 : **Image I/O, Docstrings**
 
 Oct 12
-: **Project** TBD
+: **Project** Details Coming Soon
