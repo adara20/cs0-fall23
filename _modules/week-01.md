@@ -8,6 +8,7 @@ Aug 21
   
 Aug 23
 : **Languages, Hello World**
+  : [slides](https://edstem.org/us/courses/41629/lessons/74107/slides/401913){:target="_blank"}
 
 Aug 24
 : **Lab**{: .label .label-purple } Printing
