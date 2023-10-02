@@ -3,7 +3,7 @@ title: Week 8
 ---
 
 Oct 9
-: **2-Dimensional Lists, Nested For Loops, Images**
+: **Watch lecture on YT: 2-Dimensional Lists, Nested For Loops, Images**
   
 Oct 11
 : **Image I/O, Docstrings**
