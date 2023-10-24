@@ -62,12 +62,11 @@ Your overall grade will be calculated using the following relative weights:
 
 | Assignment Type | # of Assignments | Number Dropped | Weight in Overall Grade |
 |:-------------|:------------------|:------|:------|
-| Midterm Exam(s) | 2 | 0  | 23% |
-| Final Exam | 1 | 0  | 17% |
-| Homeworks | 5 | 0  | 15% |
-| Labs | 12 | 2  | 23% |
-| Projects | 2 | 0 | 17% |
-| Quiz | 8 | 1 | 5% |
+| Midterm Exam(s) | 2 | 0  | 25% |
+| Final Exam | 1 | 0  | 25% |
+| Labs | 12 | 2  | 25% |
+| Projects | 2 | 0 | 20% |
+| Quiz | 10 | 3 | 5% |
 
 ### Assignments
 These details are subject to change during the semester, however the current plan of record is the following:
