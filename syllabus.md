@@ -65,16 +65,15 @@ Your overall grade will be calculated using the following relative weights:
 | Midterm Exam(s) | 2 | 0  | 25% |
 | Final Exam | 1 | 0  | 25% |
 | Labs | 12 | 2  | 25% |
-| Projects | 2 | 0 | 20% |
+| Projects | 1 | 0 | 20% |
 | Quiz | 10 | 3 | 5% |
 
 ### Assignments
 These details are subject to change during the semester, however the current plan of record is the following:
 
 - ~8 Quizzes - random time during lecture time, once a week. 
-- 12 Labs - 1x per week. Work w/ partners, submit individually
-- 5 Homeworks - spread throughout the semester. Work individually, submit individually.
-- 2 Projects - More details coming soon.
+- ~12 Labs - 1x per week. Work w/ partners, submit individually
+- 1 Project - Image Filter.
 
 Assignments will be due at 11:59pm, with a 10% penalty per each day that the assignment is late up to 5 days total.
 
