@@ -9,4 +9,4 @@ Nov 29
 : **Class Methods, In Closing, What's Next**
 
 Nov 30
-: **Final Review** (No lab assignment this week)
+: **Final Exam** (No lab assignment this week)
