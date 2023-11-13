@@ -6,7 +6,7 @@ Nov 6
 : **Exam 2** 
   
 Nov 8
-: **Computer Science Ethics**
+: **Runtime and Algorithms**
 
 Nov 9
-: **Lab**{: .label .label-purple }Lab 11: Big O, Complexity
+: **Lab**{: .label .label-purple }Lab 11: Wordle Game
