@@ -3,10 +3,12 @@ title: Week 15
 ---
 
 Nov 27
-: **Classes, Attributes, Object-Oriented Programming**
+: **Syntactic Sugar: Comprehensions, Unpacking, Ternary Operator**
+: **Review for Final Exam**
+: **Keeping in touch**
   
 Nov 29
-: **Class Methods, In Closing, What's Next**
+: **Review part II, How to Use Generative AI**
 
 Nov 30
-: **Final Exam** (No lab assignment this week)
+: **Final Exam**
