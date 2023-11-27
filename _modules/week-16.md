@@ -2,5 +2,5 @@
 title: Week 16
 ---
 
-School Assigned Exam Day
-: **Final Exam**: 
+Exam week
+: **Please reach out if your grade on Canvas needs to be updated**: 
