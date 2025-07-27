@@ -1,7 +1,6 @@
 ---
 name: Sophie Wu 
 role: Google Teaching Assistant
-email: sophiewu@google.com
 photo: sophie.jpg
 ---
 

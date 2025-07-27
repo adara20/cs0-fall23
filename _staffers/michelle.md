@@ -1,7 +1,6 @@
 ---
 name: Michelle Roxas
 role: Google Teaching Assistant
-email: michelleroxas@google.com
 photo: michelle.jpg
 ---
 

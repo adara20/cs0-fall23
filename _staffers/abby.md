@@ -1,7 +1,6 @@
 ---
 name: Abby Schmiedt 
 role: Google Teaching Assistant
-email: aschmiedt@google.com
 photo: abby.jpg
 ---
 

@@ -1,7 +1,6 @@
 ---
 name: Umer Abdullah 
 role: Google Teaching Assistant
-email: umerabdullah@google.com
 photo: umer.jpg
 ---
 

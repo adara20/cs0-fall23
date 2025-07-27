@@ -1,7 +1,6 @@
 ---
 name: Anjali Krishnan 
 role: Google Teaching Assistant
-email: lanjalikrishnan@google.com
 photo: anjali.jpg
 ---
 
