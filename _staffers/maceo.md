@@ -1,7 +1,6 @@
 ---
 name: Maceo Thompson 
 role: Google Teaching Assistant
-email: maceothompson@google.com
 photo: maceo.jpg
 ---
 

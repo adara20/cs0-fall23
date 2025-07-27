@@ -1,7 +1,6 @@
 ---
 name: Paridhi Khaitan 
 role: Google Teaching Assistant
-email: paridhikhaitan@google.com
 photo: paridhi.jpg
 ---
 

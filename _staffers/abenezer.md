@@ -1,7 +1,6 @@
 ---
 name: Abenezer Dara
 role: Instructor
-email: abenezer+hu@google.com
 photo: abenezer.png
 ---
 
