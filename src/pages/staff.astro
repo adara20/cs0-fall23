@@ -72,7 +72,8 @@ const contentMap = Object.fromEntries(rendered.map(r => [r.slug, r.Content]));
                     <img
                       src={`/assets/images/${staffer.data.photo}`}
                       alt={staffer.data.name}
-                      class="w-full h-full object-cover object-top"
+                      class="w-full h-full object-cover"
+                      style={`object-position: ${staffer.data['photo-position'] ?? 'center top'}`}
                     />
                   ) : (
                     <span class="text-3xl font-bold text-slate-400">
