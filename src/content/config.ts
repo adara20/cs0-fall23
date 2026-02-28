@@ -11,6 +11,7 @@ const staffers = defineCollection({
     website: z.string().optional(),
     'office-hours': z.string().optional(),
     section: z.string().optional(),
+    'photo-position': z.string().optional(), // CSS object-position, e.g. "center", "top", "50% 20%"
   }),
 });
 
