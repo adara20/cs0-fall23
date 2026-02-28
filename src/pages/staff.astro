@@ -1,0 +1,138 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { getCollection } from 'astro:content';
+
+const staffers = await getCollection('staffers');
+
+const instructors = staffers.filter(s => s.data.role === 'Instructor');
+const howardTAs   = staffers.filter(s => s.data.role === 'Howard Teaching Assistant');
+const googleTAs   = staffers.filter(s => s.data.role === 'Google Teaching Assistant');
+
+// Pre-render all bios
+const bios: Record<string, string> = {};
+await Promise.all(
+  staffers.map(async (s) => {
+    const { Content } = await s.render();
+    // Render to static HTML string via a component — we store the component ref
+    bios[s.slug] = s.body; // raw body for display
+  })
+);
+
+interface StafferGroup {
+  label: string;
+  members: typeof staffers;
+}
+
+const groups: StafferGroup[] = [
+  { label: 'Instructors',              members: instructors },
+  { label: 'Howard Teaching Assistants', members: howardTAs   },
+  { label: 'Google Teaching Assistants', members: googleTAs   },
+].filter(g => g.members.length > 0);
+
+// Render all content components
+const rendered = await Promise.all(
+  staffers.map(async (s) => {
+    const { Content } = await s.render();
+    return { slug: s.slug, Content };
+  })
+);
+const contentMap = Object.fromEntries(rendered.map(r => [r.slug, r.Content]));
+---
+
+<Layout title="Staff">
+
+  <div class="mb-8 pb-6 border-b border-slate-200">
+    <h1 class="text-3xl font-bold tracking-tight text-slate-900 mb-2">Course Staff</h1>
+    <p class="text-slate-500">Meet your instructors and teaching assistants.</p>
+  </div>
+
+  {groups.map(group => {
+    const Content = null;
+    return (
+      <section class="mb-12">
+        <!-- Section header -->
+        <div class="flex items-center gap-4 mb-6">
+          <h2 class="text-sm font-semibold text-slate-500 uppercase tracking-widest whitespace-nowrap">
+            {group.label}
+          </h2>
+          <span class="flex-1 h-px bg-slate-200"></span>
+          <span class="text-xs text-slate-400">{group.members.length} {group.members.length === 1 ? 'member' : 'members'}</span>
+        </div>
+
+        <!-- Cards grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+          {group.members.map((staffer) => {
+            const StafferContent = contentMap[staffer.slug];
+            return (
+              <div class="bg-white rounded-2xl border border-slate-100 shadow-sm hover:shadow-md hover:border-blue-200 transition-all duration-200 p-6 flex flex-col items-center text-center gap-4">
+
+                <!-- Photo -->
+                <div class="w-28 h-28 rounded-full overflow-hidden ring-4 ring-slate-100 shrink-0 bg-slate-100 flex items-center justify-center">
+                  {staffer.data.photo ? (
+                    <img
+                      src={`/assets/images/${staffer.data.photo}`}
+                      alt={staffer.data.name}
+                      class="w-full h-full object-cover object-top"
+                    />
+                  ) : (
+                    <span class="text-3xl font-bold text-slate-400">
+                      {staffer.data.name.charAt(0)}
+                    </span>
+                  )}
+                </div>
+
+                <!-- Name + role -->
+                <div class="space-y-1.5">
+                  <h3 class="font-semibold text-slate-900 text-lg leading-tight">
+                    {staffer.data.website ? (
+                      <a href={staffer.data.website} target="_blank" rel="noopener noreferrer" class="hover:text-blue-600 transition-colors">
+                        {staffer.data.name}
+                      </a>
+                    ) : (
+                      staffer.data.name
+                    )}
+                  </h3>
+                  {staffer.data.pronouns && (
+                    <p class="text-xs text-slate-400">{staffer.data.pronouns}</p>
+                  )}
+                  <span class="inline-block px-2.5 py-0.5 rounded-full text-xs font-medium bg-blue-50 text-blue-700 border border-blue-100">
+                    {staffer.data.role}
+                  </span>
+                </div>
+
+                <!-- Email -->
+                {staffer.data.email && (
+                  <a href={`mailto:${staffer.data.email}`} class="text-sm text-blue-600 hover:text-blue-700 hover:underline truncate max-w-full">
+                    {staffer.data.email}
+                  </a>
+                )}
+
+                <!-- Office hours / section -->
+                {staffer.data['office-hours'] && (
+                  <p class="text-xs text-slate-500">
+                    <span class="font-medium text-slate-600">Office Hours:</span>{' '}
+                    {staffer.data['office-hours']}
+                  </p>
+                )}
+                {staffer.data.section && (
+                  <p class="text-xs text-slate-500">
+                    <span class="font-medium text-slate-600">Section:</span>{' '}
+                    {staffer.data.section}
+                  </p>
+                )}
+
+                <!-- Bio -->
+                <div class="prose prose-sm prose-slate max-w-none text-left w-full
+                  prose-p:text-slate-500 prose-p:leading-relaxed prose-p:text-sm prose-p:m-0">
+                  <StafferContent />
+                </div>
+
+              </div>
+            );
+          })}
+        </div>
+      </section>
+    );
+  })}
+
+</Layout>
