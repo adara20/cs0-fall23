@@ -9,6 +9,6 @@ Sep 6
 : Intro to Logic, Conditionals and String Functions
 
 Sep 7
-: **Lab**{: .label .label-purple } Conditionals
+: <span class="not-prose inline-flex items-center px-2 py-0.5 rounded-full text-xs font-semibold bg-violet-100 text-violet-800">Lab</span> Conditionals
 
 
