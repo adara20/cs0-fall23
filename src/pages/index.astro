@@ -1,0 +1,80 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { getCollection } from 'astro:content';
+
+const modules = await getCollection('modules');
+modules.sort((a, b) => a.slug.localeCompare(b.slug));
+
+const renderedModules = await Promise.all(
+  modules.map(async (mod) => {
+    const { Content } = await mod.render();
+    return { mod, Content };
+  })
+);
+---
+
+<Layout title="Home">
+
+  <!-- Hero -->
+  <div class="mb-10 pb-8 border-b border-slate-200">
+    <div class="flex items-center gap-2 text-blue-600 text-xs font-semibold tracking-widest uppercase mb-4">
+      <span class="w-6 h-px bg-blue-600 rounded"></span>
+      Fall 2023
+    </div>
+    <h1 class="text-4xl font-bold tracking-tight text-slate-900 mb-3">
+      Howard CSCI 100
+    </h1>
+    <p class="text-lg text-slate-500 leading-relaxed max-w-2xl">
+      Intro to Computer Science — a gentle but thorough introduction designed for
+      students with no prior programming experience.
+    </p>
+    <div class="mt-5 flex flex-wrap gap-3">
+      <a href="/syllabus" class="inline-flex items-center gap-1.5 px-4 py-2 rounded-lg bg-blue-600 text-white text-sm font-medium hover:bg-blue-700 transition-colors">
+        View Syllabus
+        <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+        </svg>
+      </a>
+      <a href="/staff" class="inline-flex items-center gap-1.5 px-4 py-2 rounded-lg border border-slate-300 text-slate-700 text-sm font-medium hover:bg-slate-50 hover:border-slate-400 transition-colors">
+        Meet the Staff
+      </a>
+    </div>
+  </div>
+
+  <!-- Course Materials -->
+  <div>
+    <div class="flex items-center justify-between mb-5">
+      <div>
+        <h2 class="text-lg font-semibold text-slate-900">Course Materials</h2>
+        <p class="text-sm text-slate-500 mt-0.5">Weekly modules with lecture topics, slides, and lab assignments.</p>
+      </div>
+      <span class="text-xs text-slate-400 font-mono">{modules.length} weeks</span>
+    </div>
+
+    <div class="space-y-3">
+      {renderedModules.map(({ mod, Content }) => (
+        <div class="bg-white rounded-xl border border-slate-200 shadow-sm overflow-hidden hover:border-blue-300 hover:shadow-md transition-all duration-200 group">
+          <!-- Card header -->
+          <div class="px-5 py-3 bg-slate-50 border-b border-slate-200 flex items-center justify-between">
+            <div class="flex items-center gap-3">
+              <span class="w-1.5 h-4 rounded-full bg-blue-500 group-hover:bg-blue-600 transition-colors"></span>
+              <h3 class="font-semibold text-slate-800 text-sm">{mod.data.title}</h3>
+            </div>
+            <span class="text-xs text-slate-400 font-mono bg-slate-100 px-2 py-0.5 rounded">
+              {mod.slug.replace(/-/g, ' ')}
+            </span>
+          </div>
+          <!-- Card body: rendered markdown (definition lists via remark-deflist) -->
+          <div class="px-5 py-4 prose prose-sm prose-slate max-w-none
+            prose-dt:text-slate-500 prose-dt:font-medium prose-dt:not-italic
+            prose-dd:text-slate-700 prose-dd:ml-4
+            prose-a:text-blue-600 prose-a:no-underline hover:prose-a:underline
+            prose-strong:text-slate-800">
+            <Content />
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+
+</Layout>

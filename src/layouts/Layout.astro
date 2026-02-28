@@ -1,0 +1,138 @@
+---
+interface Props {
+  title?: string;
+  description?: string;
+  // passed automatically by Astro when this layout is used by a .md page
+  frontmatter?: { title?: string; description?: string };
+}
+
+const { title: propTitle, description: propDesc, frontmatter } = Astro.props;
+
+const title       = propTitle       || frontmatter?.title       || 'CSCI 100';
+const description = propDesc        || frontmatter?.description || 'Intro to Computer Science at Howard University';
+const currentPath = Astro.url.pathname;
+
+const navItems = [
+  { label: 'Home',          href: '/'             },
+  { label: 'Announcements', href: '/announcements' },
+  { label: 'Staff',         href: '/staff'         },
+  { label: 'Schedule',      href: '/schedule'      },
+  { label: 'Syllabus',      href: '/syllabus'      },
+  { label: 'Calendar',      href: '/calendar'      },
+];
+
+const auxLinks = [
+  { label: 'EdStem',   href: 'https://edstem.org/us/courses/41629/' },
+  { label: 'Canvas',   href: 'http://canvas.howard.edu/'            },
+  { label: 'YouTube',  href: 'https://www.youtube.com/channel/UCS-xiMGMN9YsMxQnqAai4hw/featured' },
+];
+
+function isActive(href: string) {
+  if (href === '/') return currentPath === '/' || currentPath === '';
+  return currentPath.startsWith(href);
+}
+---
+
+<!doctype html>
+<html lang="en" class="h-full">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content={description} />
+    <title>{title} — CSCI 100</title>
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet" />
+  </head>
+
+  <body class="h-full bg-slate-50 font-sans antialiased text-slate-900">
+
+    <!-- ── Mobile top bar ──────────────────────────────────────────── -->
+    <div class="lg:hidden bg-slate-900 sticky top-0 z-50 shadow-lg">
+      <div class="flex items-center gap-3 px-4 py-3">
+        <a href="/" class="text-white font-bold text-base shrink-0 tracking-tight">CSCI 100</a>
+        <nav class="flex items-center gap-0.5 overflow-x-auto flex-1 pb-0.5">
+          {navItems.map(item => (
+            <a
+              href={item.href}
+              class:list={[
+                'px-2.5 py-1.5 rounded-md text-xs font-medium whitespace-nowrap transition-colors',
+                isActive(item.href)
+                  ? 'bg-blue-600 text-white'
+                  : 'text-slate-400 hover:text-white hover:bg-slate-800',
+              ]}
+            >
+              {item.label}
+            </a>
+          ))}
+        </nav>
+      </div>
+    </div>
+
+    <div class="flex min-h-screen">
+
+      <!-- ── Desktop sidebar ─────────────────────────────────────────── -->
+      <aside class="hidden lg:flex lg:flex-col lg:fixed lg:inset-y-0 lg:w-64 bg-slate-900 z-40 overflow-y-auto">
+
+        <!-- Logo -->
+        <div class="flex items-center px-6 py-6 border-b border-slate-700/60 shrink-0">
+          <a href="/" class="block group">
+            <div class="text-white font-bold text-xl tracking-tight group-hover:text-blue-400 transition-colors">
+              CSCI 100
+            </div>
+            <div class="text-slate-400 text-xs mt-0.5 font-medium tracking-widest uppercase">
+              Howard University
+            </div>
+          </a>
+        </div>
+
+        <!-- Nav links -->
+        <nav class="flex-1 px-3 py-5 space-y-0.5">
+          <p class="px-3 mb-3 text-xs font-semibold text-slate-500 uppercase tracking-widest">Course</p>
+          {navItems.map(item => (
+            <a
+              href={item.href}
+              class:list={[
+                'flex items-center px-3 py-2 rounded-lg text-sm font-medium transition-colors duration-150',
+                isActive(item.href)
+                  ? 'bg-blue-600 text-white shadow-sm'
+                  : 'text-slate-300 hover:text-white hover:bg-slate-800',
+              ]}
+            >
+              {item.label}
+            </a>
+          ))}
+        </nav>
+
+        <!-- Aux links + footer -->
+        <div class="px-3 py-4 border-t border-slate-700/60 space-y-0.5 shrink-0">
+          <p class="px-3 mb-3 text-xs font-semibold text-slate-500 uppercase tracking-widest">Links</p>
+          {auxLinks.map(link => (
+            <a
+              href={link.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="flex items-center justify-between px-3 py-2 rounded-lg text-sm text-slate-400 hover:text-white hover:bg-slate-800 transition-colors duration-150 group"
+            >
+              {link.label}
+              <!-- external link icon -->
+              <svg class="w-3.5 h-3.5 opacity-40 group-hover:opacity-100 transition-opacity shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+              </svg>
+            </a>
+          ))}
+          <p class="px-3 pt-4 text-xs text-slate-600">© 2023 Howard CSCI 100</p>
+        </div>
+      </aside>
+
+      <!-- ── Main content ─────────────────────────────────────────────── -->
+      <main class="flex-1 lg:ml-64 min-h-screen">
+        <div class="px-5 py-8 max-w-5xl mx-auto sm:px-8 lg:px-10">
+          <slot />
+        </div>
+      </main>
+
+    </div>
+  </body>
+</html>
