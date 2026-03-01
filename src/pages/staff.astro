@@ -122,10 +122,25 @@ const contentMap = Object.fromEntries(rendered.map(r => [r.slug, r.Content]));
                   </p>
                 )}
 
-                <!-- Bio -->
-                <div class="prose prose-sm prose-slate max-w-none text-left w-full
-                  prose-p:text-slate-500 prose-p:leading-relaxed prose-p:text-sm prose-p:m-0">
-                  <StafferContent />
+                <!-- Bio with collapse/expand -->
+                <div class="w-full" data-bio-wrapper>
+                  <div
+                    class="overflow-hidden prose prose-sm prose-slate max-w-none text-left w-full
+                      prose-p:text-slate-500 prose-p:leading-relaxed prose-p:text-sm prose-p:m-0"
+                    style="max-height: 6rem; transition: max-height 0.3s ease;"
+                    data-bio-content
+                  >
+                    <StafferContent />
+                  </div>
+                  <!-- Fade gradient that overlaps the truncated text -->
+                  <div class="h-8 -mt-8 bg-gradient-to-t from-white to-transparent pointer-events-none" data-bio-fade></div>
+                  <button
+                    class="mt-1 text-xs text-blue-600 hover:text-blue-700 font-medium hidden"
+                    type="button"
+                    data-bio-toggle
+                  >
+                    Show more
+                  </button>
                 </div>
 
               </div>
@@ -135,5 +150,35 @@ const contentMap = Object.fromEntries(rendered.map(r => [r.slug, r.Content]));
       </section>
     );
   })}
+
+<script>
+  document.querySelectorAll('[data-bio-wrapper]').forEach((wrapper) => {
+    const content = wrapper.querySelector('[data-bio-content]') as HTMLElement | null;
+    const toggle  = wrapper.querySelector('[data-bio-toggle]') as HTMLElement | null;
+    const fade    = wrapper.querySelector('[data-bio-fade]')   as HTMLElement | null;
+    if (!content || !toggle) return;
+
+    // Only show toggle when text is actually truncated
+    if (content.scrollHeight > content.clientHeight + 4) {
+      toggle.classList.remove('hidden');
+      let expanded = false;
+      toggle.addEventListener('click', () => {
+        expanded = !expanded;
+        if (expanded) {
+          content.style.maxHeight = content.scrollHeight + 'px';
+          toggle.textContent = 'Show less';
+          fade?.classList.add('hidden');
+        } else {
+          content.style.maxHeight = '6rem';
+          toggle.textContent = 'Show more';
+          fade?.classList.remove('hidden');
+        }
+      });
+    } else {
+      // Bio is short — hide the fade gradient
+      fade?.classList.add('hidden');
+    }
+  });
+</script>
 
 </Layout>
