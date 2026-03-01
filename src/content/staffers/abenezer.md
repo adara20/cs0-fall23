@@ -1,5 +1,5 @@
 ---
-name: Abenezer Dara
+name: Abenezer
 role: Instructor
 photo: abenezer.png
 ---
