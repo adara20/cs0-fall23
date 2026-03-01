@@ -10,6 +10,14 @@ const { frontmatter } = Astro.props;
 ---
 
 <Layout title={frontmatter.title} description={frontmatter.description}>
+  <!-- Scroll progress bar -->
+  <div
+    id="scroll-progress"
+    class="fixed top-0 left-0 h-0.5 bg-blue-500 z-50 transition-none"
+    style="width: 0%"
+    aria-hidden="true"
+  ></div>
+
   <article class="prose prose-slate max-w-none
     prose-headings:font-semibold prose-headings:tracking-tight
     prose-h1:text-3xl prose-h2:text-xl prose-h2:mt-10 prose-h2:mb-3
@@ -18,4 +26,17 @@ const { frontmatter } = Astro.props;
     prose-table:text-sm">
     <slot />
   </article>
+
+  <script>
+    const bar = document.getElementById('scroll-progress');
+    if (bar) {
+      const update = () => {
+        const scrolled = window.scrollY;
+        const total    = document.documentElement.scrollHeight - window.innerHeight;
+        bar.style.width = total > 0 ? `${(scrolled / total) * 100}%` : '0%';
+      };
+      window.addEventListener('scroll', update, { passive: true });
+      update();
+    }
+  </script>
 </Layout>
